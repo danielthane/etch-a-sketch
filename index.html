@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1>My Etch-a-Sketch</h1>
-    <button class="btn size-btn">Change Size</button>
-    <button class="btn reset-btn"> Reset</button>
+    
     <label for="color">Select a colour</label>
     <input type="color" name="color" id="color">
-    <div class="container">
-
+    <div class="slider-container">
+        <input type="range" id="size-selector" min="10" max="100" value="16">
+        <p>Current Size <span id="width-text">16</span> x <span id="height-text">16</span></p>
     </div>
+
+
+    <div class="container"></div>
+    
+    <button class="btn reset-btn"> Reset</button>
     <script src="etch.js"></script>
 </body>
 </html>

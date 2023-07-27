@@ -2,7 +2,9 @@ const container = document.querySelector('.container');
 const resizeBtn = document.querySelector('.size-btn');
 const resetBtn = document.querySelector('.reset-btn');
 const colorPicker = document.querySelector('#color');
-
+const widthSlider = document.querySelector('#size-selector')
+const widthValueEl = document.querySelector('#width-text');
+const heightValueEl = document.querySelector('#height-text');
 
 
 
@@ -10,7 +12,7 @@ let width = 16;
 let cells = document.querySelectorAll('.cell');
 
 function createPad(container, width){
-    let cellWidth = (500/width).toString();
+    let cellWidth = (800/width).toString();
     // Loops for each row and column
     for(let i = 0; i < width; i++){
         for (let j = 0; j < width; j++){
@@ -41,13 +43,16 @@ createPad(container, width);
 initialiseCells();
 
 
-// Adds functionality to resize the board
-resizeBtn.addEventListener('click', (e)=>{
-    width = Number(prompt("Please enter a number 100 or less"));
+
+widthSlider.addEventListener('input', ()=>{
+    width = widthSlider.value;
     cells.forEach(cell => cell.remove())
     createPad(container, width);
     initialiseCells();
+    widthValueEl.textContent = width;
+    heightValueEl.textContent = width;
 })
+
 
 // Adds reset functionality
 resetBtn.addEventListener('click', (e) => {

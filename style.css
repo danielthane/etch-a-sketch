@@ -5,6 +5,7 @@
 }
 
 .container{
+    display: grid;
     width: 500px;
 }
 
@@ -14,3 +15,10 @@
     background-color: aliceblue;
 }
 
+.btn{
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}

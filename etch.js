@@ -1,6 +1,10 @@
 const container = document.querySelector('.container');
 const resizeBtn = document.querySelector('.size-btn');
 const resetBtn = document.querySelector('.reset-btn');
+const colorPicker = document.querySelector('#color');
+
+
+
 
 let width = 16;
 let cells = document.querySelectorAll('.cell');
@@ -24,10 +28,10 @@ function createPad(container, width){
 }
 
 // Adds hover functionality
-function initialiseCells(){
+function initialiseCells(penColor="black"){
     cells.forEach(cell => {
         cell.addEventListener('mouseover', (e) =>{
-            cell.style.backgroundColor = "black";
+            cell.style.backgroundColor = penColor;
         })
     })
 }
@@ -45,6 +49,13 @@ resizeBtn.addEventListener('click', (e)=>{
     initialiseCells();
 })
 
+// Adds reset functionality
 resetBtn.addEventListener('click', (e) => {
     cells.forEach(cell => cell.style.backgroundColor = "aliceblue");
+})
+
+// Adds color picking functionality
+colorPicker.addEventListener('input', ()=>{
+    penColor = colorPicker.value;
+    initialiseCells(penColor);
 })

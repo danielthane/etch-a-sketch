@@ -12,7 +12,7 @@ let width = 16;
 let cells = document.querySelectorAll('.cell');
 
 function createPad(container, width){
-    let cellWidth = (800/width).toString();
+    let cellWidth = (600/width).toString();
     // Loops for each row and column
     for(let i = 0; i < width; i++){
         for (let j = 0; j < width; j++){

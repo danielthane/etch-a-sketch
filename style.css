@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@400;700&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+
+html{
+    background-color: cornsilk;
+}
+
+body{
+    text-align: center;
+    font-family: 'Handjet', cursive;
+}
+
+h1{
+    margin-top: 2rem;
+    font-size: 5rem;
+}
+
+
 .container{
     display: grid;
-    width: 500px;
+    width: 600px;
 }
 
 .cell{
@@ -16,9 +34,26 @@
 }
 
 .btn{
-    background-color: antiquewhite;
+    background-color: #DCE3FF;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     padding: 1rem 2rem;
+    font-family: 'Handjet', cursive;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.left{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
 }
